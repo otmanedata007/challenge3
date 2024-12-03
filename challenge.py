@@ -108,7 +108,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-    sidebar_menu()
 
-if __name__ == "__main__":
-    main()
