@@ -34,8 +34,10 @@ def authenticate(username, password):
 # Afficher la page d'authentification
 def login_page():
     st.title("Login")
-    username = st.text_input("Username")
-    password = st.text_input("Password", type="password")
+    
+    # Pré-remplir les champs avec des valeurs par défaut (par exemple 'root' et 'rootMDP')
+    username = st.text_input("Username", value="root")  # Préremplir avec 'root'
+    password = st.text_input("Password", type="password", value="rootMDP")  # Préremplir avec 'rootMDP'
     
     if st.button("Login"):
         if username and password:
@@ -102,6 +104,10 @@ def main():
         st.session_state["logged_in"] = False
     
     # Affichage du menu
+    sidebar_menu()
+
+if __name__ == "__main__":
+    main()
     sidebar_menu()
 
 if __name__ == "__main__":
